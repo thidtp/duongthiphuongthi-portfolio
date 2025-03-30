@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/Hero.css'
-
+import Avatar from "../assets/images/avatar_1.jpg"
 const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -21,7 +21,7 @@ const Hero = () => {
                 
             </div>
             <div className="hero-img">
-                <img src="/src/assets/images/avatar_1.jpg" alt="Profile" className="profile-pic" />
+                <img src={Avatar} alt="Profile" className="profile-pic" />
             </div>
         </section>
     );
