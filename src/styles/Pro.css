@@ -1,0 +1,134 @@
+.projects {
+    left: 0;
+    width: 100%;
+    margin-top: 200px;
+    
+}
+
+.project-title {
+    font-size: 70px;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 30px;
+}
+
+.pro-timeline-items {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 35px;
+    gap: 20px;
+    position: relative;
+    width: 70%;
+}
+
+.pro-timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #0ACBE0;
+    left: 175px;
+}
+
+.pro-timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 175px;
+}
+
+.pro-timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #0ACBE0;
+    box-shadow: 0 0 25px #0ACBE0, 0 0 50px #0ACBE0;
+    position: absolute;
+    left: 132px;
+    border-radius: 50%;
+    top: 10px;
+}
+
+.pro-timeline-date {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 0 15px;
+}
+
+.pro-timeline-content {
+    border: 3px solid #0ACBE0;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #0ACBE0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pro-timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px #0ACBE0;
+}
+
+.pro-content-title {
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 800px;
+}
+
+.pro-content-title1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.project-content p {
+    font-size: 20px;
+}
+
+.pro-extra-content{
+    font-size: 20px;
+    
+}
+.pro-extra-content ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+.pro-extra-content {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.pro-timeline-item .extra-content {
+    max-height: 900px; 
+}
+
+
+.pro-view-more-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: cyan;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+
+.pro-view-more-btn:hover {
+    background: lightblue;
+}
+
+

@@ -1,0 +1,93 @@
+.skills{
+    left: 0;
+    width: 100%;
+    margin-top: 100px;
+}
+.sk-title {
+    font-size: 70px;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 30px;
+}
+.skills-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 170px;
+    flex-wrap: wrap;
+
+}
+.tech-skills{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+}
+.tech-title, .pro-title{
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 20px;
+}
+.skill-item, .skill-item1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.tech-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.tech-name, .pro-name{
+    font-size: 20px;
+}
+.progress-line {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4facfe, #0ACBE0);
+    transition: width 0.5s ease-in-out;
+}
+.progress-percent {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.pro-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+
+}
+.pro-content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skill-item1{
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.skill-item1 .CircularProgressbar {
+    width: 150px !important;
+    height: 150px !important;
+}
+.circle-skill {
+    text-align: center;
+  }

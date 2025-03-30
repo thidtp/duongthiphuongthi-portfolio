@@ -1,0 +1,106 @@
+:root {
+    --text-size: 25px;
+    --text-color: #FFFFFF;
+    --text-weight: bold;
+    --text-color1: #0ACBE0;
+    --text-size1:40px;
+}
+.home {
+
+    width: 100%;
+    padding: 5px 70px;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 35px;
+    gap: 20px;
+}
+.hero-title{
+    font-size: var(--text-size1);
+    font-weight: var(--text-weight);
+}
+.hero-name{
+    font-size: 60px;
+    font-weight: var(--text-weight);
+    color: var(--text-color1);
+    text-shadow: 0 0 20px var(--text-color1), 0 0 40px var(--text-color1);
+    filter: brightness(1.5);
+}
+.text-animation{
+    font-size: 30px;
+    font-weight: var(--text-weight);
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "";
+    color: var(--text-color1);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--text-color1);
+    right: -8px;
+    bottom: -2px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #000000;
+    }
+}
+@keyframes words{
+    0%, 50%{
+        content: "Front End Developer";
+    }
+    50%, 100%{
+        content: "Web Developer";
+    }
+}
+@keyframes typing{
+    10%, 30%, 50%, 70%, 90%, 100% {
+        width: 0;
+    }
+    5%, 20%, 40%, 80%, 100% {
+        width: calc(100% + 8px);
+    }
+}
+.hero-container p{
+    font-size: 20px;
+    font-weight: medium;
+    margin-bottom: 10px;
+}
+.download-btn{
+    font-size: 20px;
+    background-color: var(--text-color1);
+    font-weight: var(--text-weight);
+    box-shadow: 0 0 25px var(--text-color1);
+}
+.download-btn:hover{
+    border: 1px solid var(--text-color1);
+    box-shadow: 0 0 25px var(--text-color1), 0 0 50px var(--text-color1), 0 0 100px var(--text-color1);
+}
+.hero-img img{
+    position: relative;
+    width: 70vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--text-color1);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.hero-img img:hover{
+    box-shadow: 0 0 25px var(--text-color1), 0 0 50px var(--text-color1), 0 0 100px var(--text-color1);
+}
+

@@ -1,0 +1,128 @@
+.education{
+    left: 0;
+    width: 100%;
+
+}
+.edu-title{
+    font-size: 70px;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 30px;
+}
+.timeline-items{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 35px;
+    gap: 20px;
+    position: relative;
+}
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color:#0ACBE0;
+    left: 175px;
+}
+.timeline-item{
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 175px;
+}
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: #0ACBE0;
+    box-shadow: 0 0 25px #0ACBE0, 0 0 50px #0ACBE0;
+    position: absolute;
+    left: 132px;
+    border-radius: 50%;
+    top: 10px;
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 0 15px;
+}
+.timeline-content{
+    width: 800px;
+    border: 3px solid #0ACBE0;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #0ACBE0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.timeline-content:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 50px #0ACBE0;
+}
+.content-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.content-school{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.content-logo{
+    width: 60px;
+    height: 60px;
+}
+.content-title1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.timeline-content p{
+    font-size: 20px;
+
+
+}
+.content-img {
+    width: 700px;
+    background-position: center;
+    border-radius: 20px;
+
+}
+
+.content-award{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.extra-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.timeline-item .extra-content {
+    max-height: 900px; 
+}
+
+.view-more-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: cyan;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.view-more-btn:hover {
+    background: lightblue;
+}
+
