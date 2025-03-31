@@ -44,4 +44,32 @@
     font-size: 18px;
     font-weight: bold;
 }
+@media (max-width: 1024px) {
+    .contact {
+        margin-top: 100px;
+    }
+}
+@media (max-width: 768px) {
+    
+    .contact-title {
+        font-size: 30px;
+    }
+
+    .contact-item {
+        margin-top: -100px;
+        width: 100%;
+        justify-content: center;
+        gap: 5px;
+    }
+    .contact-item a {
+        gap: 15px;
+    }
+
+}
+/* 
+@media (max-width: 480px) {
+    
+} */
+
+
 

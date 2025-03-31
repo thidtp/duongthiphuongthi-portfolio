@@ -9,27 +9,36 @@ const Header = () => {
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        console.log("Đang active:", entry.target.id);
                         setActive(entry.target.id);
                     }
                 });
             },
-            { root: null, rootMargin: "30px", threshold: 0.5 }
+            { root: null, rootMargin: "0px", threshold: 0.2 }
         );
-
         sections.forEach((section) => observer.observe(section));
-
         return () => {
             sections.forEach((section) => {
                 observer.unobserve(section);
             });
         };
     }, []);
-
+    useEffect(() => {
+        setTimeout(() => {
+            const projectSection = document.getElementById("projects");
+            if (projectSection) {
+                console.log("Chiều cao projects:", projectSection.offsetHeight);
+                console.log("Vị trí top:", projectSection.getBoundingClientRect().top);
+            } else {
+                console.log("Không tìm thấy #projects");
+            }
+        }, 1000);
+    }, []);
+    
     return (
         <header className="header">
             <Link to="home" smooth={true} duration={500} className="logo" onClick={() => setActive("home")}>

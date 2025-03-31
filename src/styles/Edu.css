@@ -1,7 +1,6 @@
 .education{
     left: 0;
     width: 100%;
-
 }
 .edu-title{
     font-size: 70px;
@@ -69,14 +68,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
-
 }
 .content-logo{
     width: 60px;
     height: 60px;
 }
 .content-title1{
-    font-size: 20px;
     font-weight: bold;
 }
 .timeline-content p{
@@ -125,4 +122,164 @@
 .view-more-btn:hover {
     background: lightblue;
 }
+@media (max-width: 1024px) {
+    .education{
+        margin-top: 20px;
+    }
+    .edu-title{
+        font-size: 50px;
+        text-align: center;
+    }
+    .timeline-items::before{
+        width: 3px;
+        left: 40px;
+    }
+    .timeline-item{
+        padding-left: 40px;
+        width: 100%;
+    }
+    .timeline-dot{
+        height: 17px;
+        width: 17px;
+        left: -2px;
+    }
+    .timeline-date{
+        font-size: 20px;
+    }
+    .timeline-content{
+        width: 90%;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content-title{
+        font-size: 25px;
+    }
+    .content-school{
+        gap: 7px;
+    }
+    .content-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .timeline-content p{
+        font-size: 20px;
+    }
+    .content-img {
+        width: 700px;
+        background-position: center;
+        border-radius: 20px;
+    
+    }
+    .view-more-btn {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .education{
+        margin-top: 100px;
+    }
+    .edu-title{
+        font-size: 30px;
+        text-align: center;
+    }
+    .timeline-items::before{
+        width: 3px;
+        left: 40px;
+    }
+    .timeline-item{
+        padding-left: 40px;
+    }
+    .timeline-dot{
+        height: 17px;
+        width: 17px;
+        left: -2px;
+    }
+    .timeline-date{
+        font-size: 20px;
+    }
+    .timeline-content{
+        width: 90%;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content-title{
+        font-size: 18px;
+    }
+    .content-school{
+        gap: 7px;
+    }
+    .content-logo{
+        width: 35px;
+        height: 35px;
+    }
+    .timeline-content p{
+        font-size: 15px;
+    }
+    .content-img {
+        width: 700px;
+        background-position: center;
+        border-radius: 20px;
+    
+    }
+    .view-more-btn {
+        font-size: 15px;
+    }
+}
 
+@media (max-width: 480px) {
+    .education{
+        margin-top: -180px;
+    }
+    .edu-title{
+        font-size: 30px;
+        text-align: center;
+    }
+    .timeline-items::before{
+        width: 3px;
+        left: 40px;
+    }
+    .timeline-item{
+        padding-left: 40px;
+    }
+    .timeline-dot{
+        height: 17px;
+        width: 17px;
+        left: -2px;
+    }
+    .timeline-date{
+        font-size: 20px;
+    }
+    .timeline-content{
+        width: 90%;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content-title{
+        font-size: 18px;
+    }
+    .content-school{
+        gap: 7px;
+    }
+    .content-logo{
+        width: 35px;
+        height: 35px;
+    }
+    .timeline-content p{
+        font-size: 15px;
+    }
+    .content-img {
+        width: 700px;
+        background-position: center;
+        border-radius: 20px;
+    
+    }
+    .view-more-btn {
+        font-size: 15px;
+    }
+}
