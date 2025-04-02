@@ -18,7 +18,7 @@ export const contactData = [
     },
     {
         name: "Website",
-        link: "https://duongthiphuongigthi.vercel.app", // Thay bằng URL trang cá nhân
+        link: "https://duongthiphuongthi.vercel.app", // Thay bằng URL trang cá nhân
         logo: "mdi:web",
     }
 ];

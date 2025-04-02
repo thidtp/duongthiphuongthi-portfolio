@@ -287,5 +287,17 @@
         font-size: 15px;
     }
 }
+@media screen and (max-width:400px) {
+    .pro-timeline-content {
+        width: 150%;
+    }
+    
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}
 
 
