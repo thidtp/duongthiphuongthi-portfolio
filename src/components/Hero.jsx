@@ -16,7 +16,7 @@ const Hero = () => {
                 <h2 className="hero-title">Hi, It's Me</h2>
                 <h1 className="hero-name">Duong Thi Phuong Thi</h1>
                 <h3 className="text-animation">And I'm a <span></span></h3>
-                <p>I am a recent graduate Front-end Developer specializing in modern web interface design and user experience optimization. With internship experience and personal projects, I am eager to develop my career in Front-end programming.</p>
+                <p>I am a recent graduate with one year of Front-end development experience through personal projects and internships. Skilled in web design, user experience optimization, and experienced with ReactJS and Tailwind CSS, I am passionate about creating intuitive, visually appealing web experiences and eager to contribute to innovative digital products.</p>
                 <button className="download-btn" onClick={handleDownload}> Download CV</button>
                 
             </div>
