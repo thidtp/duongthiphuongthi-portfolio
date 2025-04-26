@@ -38,9 +38,22 @@ const ProjectTimeline = () => {
                                             </ul>
                                         </div>
                                     )}
-                                    <button className="pro-view-more-btn" onClick={() => handleToggle1(index)}>
+                                    {/* <button className="pro-view-more-btn" onClick={() => handleToggle1(index)}>
                                         {expandedPro === index ? "View Less" : "View More"}
-                                    </button> 
+                                    </button>  */}
+                                    <button
+                                    className="pro-view-more-btn"
+                                        onClick={() => handleToggle1(index)}
+                                    >
+                                        <strong>{expandedPro === index ? "View Less" : "View More"}</strong>
+                                        <div id="container-stars">
+                                            <div id="stars"></div>
+                                        </div>
+                                        <div id="glow">
+                                            <div className="circle"></div>
+                                            <div className="circle"></div>
+                                        </div>
+                                    </button>
                                 </div>
                             )}
                         </div>
