@@ -3,6 +3,7 @@
     width: 100%;
     margin-top: 180px;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .contact-title {
@@ -17,33 +18,216 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center; 
-    max-width: 600px;
+    max-width: 700px;
     height: 500px;
     margin: 0 auto;
     padding: 40px;
     margin-bottom: 50px;
 }
+.card {
+    width: 400px;
+    height: 400px;
+    background: black;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: hsla(0, 0%, 96%, 0.188) 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid #81dce6;
+    
+}
 
-.contact-item {
-    width: calc(50% - 20px); 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: 0.3s;
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
 }
-.contact-item a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+
+.card::after, .card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 102%;
+    height: 102%;
+    background: conic-gradient(from var(--angle), #6bd5ff, #22e2f8);
+    transform: translate(-50%, -50%);
+    border-radius: 32px;
+    z-index: -1;
+    padding: 10px;
+    animation: 2.5s spin linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.card .mail {
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card .mail:hover {
+    transform: scale(1.1);
+}
+
+.card .mail svg {
+    stroke: #81dce6;
+    stroke-width: 1px;
+}
+
+.card .mail svg:hover {
+    stroke: #0ACBE0;
+}
+
+.card .profile-pic {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 2px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #81dce6;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.card .profile-pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.card .bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #81dce6;
+    top: 85%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.card .bottom .content {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1rem;
+    height: 270px;
+}
+
+.card .bottom .content .name {
+    display: block;
+    font-size: 1.2rem;
     color: white;
-    gap: 20px;
-}
-.contact-name {
-    font-size: 18px;
     font-weight: bold;
 }
+
+.card .bottom .content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.card .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .bottom .bottom-bottom .social-links-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.card .bottom .bottom-bottom .social-links-container a {
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card .bottom .bottom-bottom .social-links-container a:hover {
+    color: #f55d56;
+    transform: scale(1.2);
+}
+
+.card .bottom .bottom-bottom .social-links-container svg {
+    height: 30px;
+    fill: white;
+    filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+}
+
+.card .bottom .bottom-bottom .social-links-container svg:hover {
+    fill: #f55d56;
+    transform: scale(1.2);
+}
+
+.card:hover {
+    border-top-left-radius: 55px;
+}
+
+.card:hover .bottom {
+    top: 15%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.card:hover .profile-pic {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #81dce6;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.card:hover .profile-pic:hover {
+    transform: scale(1.3);
+    border-radius: 0px;
+}
+
+.card:hover .profile-pic img {
+    transform: scale(2.5);
+    object-position: 0px 15px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+.card:hover .profile-pic svg {
+    transform: scale(2.5);
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
 @media (max-width: 1024px) {
     .contact {
         margin-top: 100px;
@@ -55,21 +239,4 @@
         font-size: 30px;
     }
 
-    .contact-item {
-        margin-top: -100px;
-        width: 100%;
-        justify-content: center;
-        gap: 5px;
-    }
-    .contact-item a {
-        gap: 15px;
-    }
-
 }
-/* 
-@media (max-width: 480px) {
-    
-} */
-
-
-

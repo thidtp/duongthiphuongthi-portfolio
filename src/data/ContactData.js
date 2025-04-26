@@ -2,23 +2,12 @@ import { Icon } from "@iconify/react";
 
 export const contactData = [
     {
-        name: "Thi Duong",
-        link: "https://www.linkedin.com/in/thieduong/",
-        logo: "uil:linkedin",
-    },
-    {
-        name: "Phương Thi",
-        link: "https://www.facebook.com/thie.duog/",
-        logo: "ic:twotone-facebook",
-    },
-    {
-        name: "phuongthi",
-        link: "https://github.com/thidtp",
-        logo: "ri:github-fill",
-    },
-    {
-        name: "Website",
-        link: "https://duongthiphuongthi.vercel.app", // Thay bằng URL trang cá nhân
-        logo: "mdi:web",
+        name: "Duong Thi Phuong Thi",
+        about: "I am a Front-end Developer with a strong passion for creating beautiful, functional user interfaces. With experience in ReactJS, Tailwind CSS, and responsive web design, I focus on delivering seamless user experiences and continuously learning new technologies to stay ahead in the industry.",
+        link: ["https://www.linkedin.com/in/thieduong/", 
+            "https://www.facebook.com/thie.duog/",
+            "https://github.com/thidtp",
+            "https://duongthiphuongthi.vercel.app",
+        ]
     }
 ];
