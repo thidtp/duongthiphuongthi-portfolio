@@ -13,17 +13,22 @@ const SkillsContent = () =>{
                     <h2 className="tech-title">Technical Skills</h2>
                     <div className="tech-content">
                         {SkillsData.techSkills.map((tec, index) => (
-                            <div key={index} className="skill-item">
+                            <div key={index} className="skill-box">
                                 <div className="tech-info">
-                                    <Icon icon={tec.logo} width="32" height="32" />
-                                    <p className="tech-name">{tec.name}</p>
-                                </div>    
-                                <div className="progress-line">
-                                    <div 
-                                        className="progress-fill" 
-                                        style={{ width: `${tec.percent}%` }} 
-                                    ></div>
-                                    <span className="progress-percent">{tec.percent}%</span>
+                                    <Icon icon={tec.logo} className="tech-logo" />
+                                    <span className="tech-name">{tec.name}</span>
+                                </div>
+                                <div className="skill-bar">
+                                    <span 
+                                        className={`skill-per`} 
+                                        style={{
+                                            width: `${tec.percent}%`,
+                                            animationDelay: `${0.1 + index * 0.1}s`,
+                                            background: 'linear-gradient(90deg, #4facfe, #0ACBE0)'
+                                        }}
+                                    >
+                                        <span className="tooltip">{tec.percent}%</span>
+                                    </span>
                                 </div>
                             </div>
                         ))}
